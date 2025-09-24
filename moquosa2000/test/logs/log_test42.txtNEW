@@ -1,0 +1,72 @@
+--------------------------------------------------------------
+
+CHEQUEO GEOMETRÍA
+
+--------------------------------------------------------------
+
+[-II-] El número de nudos de su modelo es 41. OK
+[-II-] La longitud de la proyección sobre el eje X de su modelo es 36.764. OK
+[-II-] La longitud de la proyección sobre el eje Y de su modelo es 2.626. OK
+[-II-] La longitud de la proyección sobre el eje Z de su modelo es 2.626. OK
+[-II-] Las coordenadas X de los nudos de su modelo son correctas
+[-II-] Las coordenadas Y de los nudos de su modelo son correctas
+[-II-] Las coordenadas Z de los nudos de su modelo son correctas
+--------------------------------------------------------------
+
+CHEQUEO TOPOLOGÍA
+
+--------------------------------------------------------------
+
+[-II-] El número de barras de su modelo es 116. OK
+[-II-] La longitud de la proyección sobre el eje X de todas las barras de su modelo son correctas
+[-II-] La longitud de la proyección sobre el eje Y de todas las barras de su modelo son correctas
+[-II-] La longitud de la proyección sobre el eje Z de todas las barras de su modelo son correctas
+--------------------------------------------------------------
+
+CHEQUEO SECCIONES
+
+--------------------------------------------------------------
+
+[-II-] Las propiedades de las secciones de su modelo son correctas. OK
+--------------------------------------------------------------
+
+CHEQUEO DOF
+
+--------------------------------------------------------------
+
+[-WW-] El grado de libertad RX de su modelo está activado. Probablemente deba desactivarlo
+[-WW-] El grado de libertad RY de su modelo está activado. Probablemente deba desactivarlo
+[-WW-] El grado de libertad RZ de su modelo está activado. Probablemente deba desactivarlo
+[-WW-] Revise los grados de libertad activos de su modelo
+--------------------------------------------------------------
+
+CHEQUEO APOYOS
+
+--------------------------------------------------------------
+
+[-II-] El número de apoyos de su modelo es 4. OK
+[-II-] Los apoyos de su modelo son correctos. OK
+--------------------------------------------------------------
+
+CHEQUEO CARGAS EN NUDOS
+
+--------------------------------------------------------------
+
+[-II-] Se comprueban 1 patrones de carga. Las componentes de sus resultantes de fuerzas y momentos son (el nombre es orientativo):
+[-II-]    0, 0, -401.75881297291, 0, 5.6843418860808E-13, 0 (G+Q)
+[-EE-] El patron de carga cuya resultante es 0, 0, -401.75881297291, 0, 5.6843418860808E-13, 0, no está definido en su modelo. KO
+
+[-WW-] El patron de carga G_CI de su modelo, cuya resultante es 0, 0, -51.991742858158, 0, 0, 0, no se ha comprobado
+
+[-WW-] El patron de carga G_CSD de su modelo, cuya resultante es 0, 0, -41.391795283599, -54.347427207365, 1.4210854715202E-14, 0, no se ha comprobado
+
+[-WW-] El patron de carga G_CSI de su modelo, cuya resultante es 0, 0, -41.391795283599, 54.347427207365, 1.4210854715202E-14, 0, no se ha comprobado
+
+[-WW-] El patron de carga Q_CI de su modelo, cuya resultante es 0, 0, -103.98548570642, 0, 1.4210854715202E-14, 0, no se ha comprobado
+
+[-WW-] El patron de carga Q_CSD de su modelo, cuya resultante es 0, 0, -82.795590507848, -108.7106103368, 1.4210854715202E-14, 0, no se ha comprobado
+
+[-WW-] El patron de carga Q_CSI de su modelo, cuya resultante es 0, 0, -82.801590478173, 108.71848829784, 2.8421709430404E-14, 0, no se ha comprobado
+
+[-EE-] 1 patrones de carga de su modelo son incorrectos
+

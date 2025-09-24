@@ -1,0 +1,9 @@
+.que.moquosa .answer {
+    padding: 0.3em;
+    width: 80%;
+    display: inline-block;
+}
+.que.moquosa .answer input {
+    width: 100%;
+    display: inline-block;
+}

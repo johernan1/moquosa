@@ -1,0 +1,39 @@
+----------------------------------------------------------------
+CHEQUEO GEOMETRÍA
+----------------------------------------------------------------
+[-II-] El número de nudos de su modelo es 6. OK
+
+[-II-] La longitud de la proyección sobre el eje X de su modelo es 8.0. OK
+[-II-] La longitud de la proyección sobre el eje Y de su modelo es 0.0. OK
+[-II-] La longitud de la proyección sobre el eje Z de su modelo es 3.0. OK
+[-WW-] La coordenada x=106.1 del nudo (106.1, 0.0, 3.0) de su modelo, probablemente sea incorrecta
+[-WW-] 1 coordenadas X de los nudos de su modelo puede ser incorrecta
+[-II-] Las coordenadas Y de los nudos de su modelo son correctas
+[-II-] Las coordenadas Z de los nudos de su modelo son correctas
+----------------------------------------------------------------
+CHEQUEO TOPOLOGÍA
+----------------------------------------------------------------
+[-II-] El número de barras de su modelo es 5. OK
+[-WW-] La longitud de la proyección sobre el eje x de la barra definida por los nudos (100.0, 0.0, 3.0) (106.1, 0.0, 3.0), probablemente deba ser 6.0
+[-WW-] La longitud de la proyección sobre el eje x de la barra definida por los nudos (106.0, 0.0, 0.0) (106.1, 0.0, 3.0), probablemente deba ser 0.0
+[-WW-] La longitud de la proyección sobre el eje x de la barra definida por los nudos (106.1, 0.0, 3.0) (107.0, 0.0, 3.0), probablemente deba ser 1.0
+[-WW-] 3 longitudes de la proyección sobre el eje X de las barras de su modelo puede ser incorrecta
+[-II-] La longitud de la proyección sobre el eje Y de todas las barras de su modelo son correctas
+[-II-] La longitud de la proyección sobre el eje Z de todas las barras de su modelo son correctas
+----------------------------------------------------------------
+CHEQUEO SECCIONES
+----------------------------------------------------------------
+[-II-] Las propiedades de las secciones de su modelo son correctas. OK
+----------------------------------------------------------------
+CHEQUEO DOF
+----------------------------------------------------------------
+[-WW-] El grado de libertad RY de su modelo está desactivado. Probablemente deba activarlo
+[-WW-] Revise los grados de libertad activos de su modelo
+----------------------------------------------------------------
+CHEQUEO APOYOS
+----------------------------------------------------------------
+[-II-] El número de apoyos de su modelo es 2. OK
+
+[-WW-] El desplazamiento U2 del nudo de su modelo cuyas coordenadas son (100.0, 0.0, 0.0) NO está coaccionado. Debería estarlo
+[-WW-] El desplazamiento R2 del nudo de su modelo cuyas coordenadas son (106.0, 0.0, 0.0) NO está coaccionado. Debería estarlo
+[-EE-] 2 vinculos de su modelo son incorrectos. KO

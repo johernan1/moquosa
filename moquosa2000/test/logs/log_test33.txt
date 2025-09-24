@@ -1,0 +1,57 @@
+----------------------------------------------------------------
+CHEQUEO GEOMETRÍA
+----------------------------------------------------------------
+[-II-] El número de nudos de su modelo es 41. OK
+
+[-II-] La longitud de la proyección sobre el eje X de su modelo es 33.6. OK
+[-II-] La longitud de la proyección sobre el eje Y de su modelo es 2.4. OK
+[-II-] La longitud de la proyección sobre el eje Z de su modelo es 2.4. OK
+[-II-] Las coordenadas X de los nudos de su modelo son correctas
+[-II-] Las coordenadas Y de los nudos de su modelo son correctas
+[-II-] Las coordenadas Z de los nudos de su modelo son correctas
+----------------------------------------------------------------
+CHEQUEO TOPOLOGÍA
+----------------------------------------------------------------
+[-II-] El número de barras de su modelo es 115. OK
+[-II-] La longitud de la proyección sobre el eje X de todas las barras de su modelo son correctas
+[-II-] La longitud de la proyección sobre el eje Y de todas las barras de su modelo son correctas
+[-II-] La longitud de la proyección sobre el eje Z de todas las barras de su modelo son correctas
+----------------------------------------------------------------
+CHEQUEO SECCIONES
+----------------------------------------------------------------
+[-II-] Las propiedades de las secciones de su modelo son correctas. OK
+----------------------------------------------------------------
+CHEQUEO DOF
+----------------------------------------------------------------
+[-II-] Los grados de libertad activos de su modelo son correctos. OK
+----------------------------------------------------------------
+CHEQUEO APOYOS
+----------------------------------------------------------------
+[-II-] El número de apoyos de su modelo es 4. OK
+
+[-II-] Los apoyos de su modelo son correctos. OK
+----------------------------------------------------------------
+CHEQUEO CARGAS EN NUDOS
+----------------------------------------------------------------
+[-II-] Se comprueban 6 patrones de carga. Las componentes de sus resultantes de fuerzas y momentos son (el nombre es orientativo):
+[-II-]    0.0, 0.0, -49.57, 0.0, -4.973799150320701e-14, 0.0 (G_CI)
+[-II-]    0.0, 0.0, -40.31999999999999, -48.38400000000001, -2.1316282072803006e-14, 0.0 (G_CSD)
+[-II-]    0.0, 0.0, -40.31999999999999, 48.38400000000001, -2.1316282072803006e-14, 0.0 (G_CSI)
+[-II-]    0.0, 0.0, -99.22999999999996, 0.0, -6.394884621840902e-14, 0.0 (Q_CI)
+[-II-]    0.0, 0.0, -80.5, -96.60000000000001, 0.0, 0.0 (Q_CSD)
+[-II-]    0.0, 0.0, -80.5, 96.60000000000001, 0.0, 0.0 (Q_CSI)
+[-II-] Se comprueba el patron de cargas de su modelo CI_G_MODIF, cuya resultante es 0.0, 0.0, -49.57, 0.0, -4.973799150320701e-14, 0.0
+[-II-]    Las cargas del patron CI_G_MODIF son correctas. OK
+[-II-] Se comprueba el patron de cargas de su modelo G_CSD, cuya resultante es 0.0, 0.0, -40.31999999999999, -48.38400000000001, -2.1316282072803006e-14, 0.0
+[-EE-]     El número de cargas del patrón de cargas G_CSD de su modelo es 15. Debería ser 14. KO
+[-II-] Se comprueba el patron de cargas de su modelo G_CSI, cuya resultante es 0.0, 0.0, -40.31999999999999, 48.38400000000001, -2.1316282072803006e-14, 0.0
+[-II-]    Las cargas del patron G_CSI son correctas. OK
+[-II-] Se comprueba el patron de cargas de su modelo CI_Q_MODIF, cuya resultante es 0.0, 0.0, -98.99599999999998, 0.0, -5.684341886080802e-14, 0.0
+[-WW-]     Las componentes de la carga 0.0, 0.0, -4.013, 0.0, 0.0 o el nudo sobre el cual la ha situado (2.4, 0.0, -2.4) son incorrectos
+[-WW-]     Las componentes de la carga 0.0, 0.0, -4.013, 0.0, 0.0 o el nudo sobre el cual la ha situado (31.2, 0.0, -2.4) son incorrectos
+[-WW-]     2 cargas sobre los nudos del patron de cargas CI_Q_MODIF de su modelo son incorrectas (aunque la resultante de todas ellas queda dentro de los margenes de error)
+[-II-] Se comprueba el patron de cargas de su modelo Q_CSD, cuya resultante es 0.0, 0.0, -80.5, -96.60000000000001, 0.0, 0.0
+[-II-]    Las cargas del patron Q_CSD son correctas. OK
+[-EE-] El patron de carga cuya resultante es 0.0, 0.0, -80.5, 96.60000000000001, 0.0, 0.0, no está definido en su modelo. KO
+[-WW-] El patron de carga Q_CSI de su modelo, cuya resultante es 0.0, 0.0, -476.5, 571.7999999999998, 6652.8, 0.0, no se ha comprobado
+[-EE-] 3 patrones de carga de su modelo son incorrectos

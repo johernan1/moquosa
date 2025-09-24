@@ -1,0 +1,30 @@
+----------------------------------------------------------------
+CHEQUEO GEOMETRÍA
+----------------------------------------------------------------
+[-II-] El número de nudos de su modelo es 6. OK
+
+[-II-] La longitud de la proyección sobre el eje X de su modelo es 8.0. OK
+[-II-] La longitud de la proyección sobre el eje Y de su modelo es 0.0. OK
+[-II-] La longitud de la proyección sobre el eje Z de su modelo es 3.0. OK
+[-II-] Las coordenadas X de los nudos de su modelo son correctas
+[-II-] Las coordenadas Y de los nudos de su modelo son correctas
+[-II-] Las coordenadas Z de los nudos de su modelo son correctas
+----------------------------------------------------------------
+CHEQUEO TOPOLOGÍA
+----------------------------------------------------------------
+[-II-] El número de barras de su modelo es 5. OK
+[-II-] La longitud de la proyección sobre el eje X de todas las barras de su modelo son correctas
+[-II-] La longitud de la proyección sobre el eje Y de todas las barras de su modelo son correctas
+[-II-] La longitud de la proyección sobre el eje Z de todas las barras de su modelo son correctas
+----------------------------------------------------------------
+CHEQUEO SECCIONES
+----------------------------------------------------------------
+[-WW-] En la barra definida por los nudos (-4.0, 0.0, 3.0) (-3.0, 0.0, 3.0) cuya sección es 'FSEC1', su área (0.0042645076), su 'set modifier' (100.0) o ambos son incorrectos. Su producto debe ser 0.0042645076
+[-WW-] En la barra definida por los nudos (-4.0, 0.0, 3.0) (-3.0, 0.0, 3.0) cuya sección es 'FSEC1', su inercia(0.000657241747), su 'set modifier' (1.0) o ambos son incorrectos. Su producto debe ser 6.5724175e-05
+[-WW-] En la barra definida por los nudos (-3.0, 0.0, 0.0) (-3.0, 0.0, 3.0) cuya sección es 'FSEC1', su área (0.0042645076), su 'set modifier' (100.0) o ambos son incorrectos. Su producto debe ser 0.0042645076
+[-WW-] En la barra definida por los nudos (-3.0, 0.0, 0.0) (-3.0, 0.0, 3.0) cuya sección es 'FSEC1', su inercia(0.000657241747), su 'set modifier' (1.0) o ambos son incorrectos. Su producto debe ser 6.5724175e-05
+[-WW-] En la barra definida por los nudos (-3.0, 0.0, 3.0) (3.0, 0.0, 3.0) cuya sección es 'FSEC1', su área (0.0042645076), su 'set modifier' (100.0) o ambos son incorrectos. Su producto debe ser 0.0042645076
+[-WW-] En la barra definida por los nudos (-3.0, 0.0, 3.0) (3.0, 0.0, 3.0) cuya sección es 'FSEC1', su inercia(0.000657241747), su 'set modifier' (1.0) o ambos son incorrectos. Su producto debe ser 6.5724175e-05
+[-WW-] En la barra definida por los nudos (3.0, 0.0, 0.0) (3.0, 0.0, 3.0) cuya sección es 'FSEC1', su área (0.0042645076), su 'set modifier' (100.0) o ambos son incorrectos. Su producto debe ser 0.0042645076
+[-WW-] En la barra definida por los nudos (3.0, 0.0, 0.0) (3.0, 0.0, 3.0) cuya sección es 'FSEC1', su inercia(0.000657241747), su 'set modifier' (1.0) o ambos son incorrectos. Su producto debe ser 6.5724175e-05
+[-EE-] Superado el número máximo de errores admitidos. KO

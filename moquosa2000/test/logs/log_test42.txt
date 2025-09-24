@@ -1,0 +1,28 @@
+--------------------------------------------------------------
+CHEQUEO GEOMETRÍA
+--------------------------------------------------------------
+[-II-] El número de nudos de su modelo es 11. OK
+
+[-II-] La longitud de la proyección sobre el eje X de su modelo es 9.61. OK
+[-II-] La longitud de la proyección sobre el eje Y de su modelo es 0.0. OK
+[-II-] La longitud de la proyección sobre el eje Z de su modelo es 0.618. OK
+[-II-] Las coordenadas X de los nudos de su modelo son correctas
+[-II-] Las coordenadas Y de los nudos de su modelo son correctas
+[-II-] Las coordenadas Z de los nudos de su modelo son correctas
+--------------------------------------------------------------
+CHEQUEO TOPOLOGÍA
+--------------------------------------------------------------
+[-II-] El número de barras de su modelo es 19. OK
+[-II-] La longitud de la proyección sobre el eje X de todas las barras de su modelo son correctas
+[-II-] La longitud de la proyección sobre el eje Y de todas las barras de su modelo son correctas
+[-II-] La longitud de la proyección sobre el eje Z de todas las barras de su modelo son correctas
+--------------------------------------------------------------
+CHEQUEO SECCIONES
+--------------------------------------------------------------
+[-WW-] En la barra definida por los nudos (0.0, 0.0, 0.0) (0.0, 0.0, 0.618) cuya sección es 'CS', su inercia(1.043e-05), su 'set modifier' (1.0) o ambos son incorrectos. Su producto debe ser 0.0
+[-WW-] En la barra definida por los nudos (0.0, 0.0, 0.618) (2.4025, 0.0, 0.618) cuya sección es 'CS', su inercia(1.043e-05), su 'set modifier' (1.0) o ambos son incorrectos. Su producto debe ser 0.0
+[-WW-] En la barra definida por los nudos (2.4025, 0.0, 0.618) (4.805, 0.0, 0.618) cuya sección es 'CS', su inercia(1.043e-05), su 'set modifier' (1.0) o ambos son incorrectos. Su producto debe ser 0.0
+[-WW-] En la barra definida por los nudos (4.805, 0.0, 0.618) (7.2075, 0.0, 0.618) cuya sección es 'CS', su inercia(1.043e-05), su 'set modifier' (1.0) o ambos son incorrectos. Su producto debe ser 0.0
+[-WW-] En la barra definida por los nudos (7.2075, 0.0, 0.618) (9.61, 0.0, 0.618) cuya sección es 'CS', su inercia(1.043e-05), su 'set modifier' (1.0) o ambos son incorrectos. Su producto debe ser 0.0
+[-WW-] En la barra definida por los nudos (9.61, 0.0, 0.0) (9.61, 0.0, 0.618) cuya sección es 'CS', su inercia(1.043e-05), su 'set modifier' (1.0) o ambos son incorrectos. Su producto debe ser 0.0
+[-EE-] 6 propiedades de las secciones de su modelo son incorrectas. KO

@@ -1,0 +1,6 @@
+----------------------------------------------------------------
+CHEQUEO GEOMETRÍA
+----------------------------------------------------------------
+[-II-] El número de nudos de su modelo es 11. OK
+
+[-EE-] La longitud de la proyección sobre el eje X de su modelo es 99.8398. Debería ser 10.0. KO

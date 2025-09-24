@@ -1,0 +1,22 @@
+----------------------------------------------------------------
+CHEQUEO GEOMETRÍA
+----------------------------------------------------------------
+[-II-] El número de nudos de su modelo es 6. OK
+
+[-II-] La longitud de la proyección sobre el eje X de su modelo es 8.0. OK
+[-II-] La longitud de la proyección sobre el eje Y de su modelo es 0.0. OK
+[-II-] La longitud de la proyección sobre el eje Z de su modelo es 3.0. OK
+[-WW-] La coordenada x=3.0 del nudo (3.0, 0.0, 3.0) de su modelo, probablemente sea incorrecta
+[-WW-] 1 coordenadas X de los nudos de su modelo puede ser incorrecta
+[-II-] Las coordenadas Y de los nudos de su modelo son correctas
+[-II-] Las coordenadas Z de los nudos de su modelo son correctas
+----------------------------------------------------------------
+CHEQUEO TOPOLOGÍA
+----------------------------------------------------------------
+[-II-] El número de barras de su modelo es 5. OK
+[-WW-] La longitud de la proyección sobre el eje x de la barra definida por los nudos (-3.0, 0.0, 3.0) (3.0, 0.0, 3.0), probablemente deba ser 6.3
+[-WW-] La longitud de la proyección sobre el eje x de la barra definida por los nudos (3.0, 0.0, 0.0) (3.0, 0.0, 3.0), probablemente deba ser 0.2999999999999998
+[-WW-] La longitud de la proyección sobre el eje x de la barra definida por los nudos (3.0, 0.0, 3.0) (4.0, 0.0, 3.0), probablemente deba ser 0.7000000000000002
+[-WW-] 3 longitudes de la proyección sobre el eje X de las barras de su modelo puede ser incorrecta
+[-II-] La longitud de la proyección sobre el eje Y de todas las barras de su modelo son correctas
+[-II-] La longitud de la proyección sobre el eje Z de todas las barras de su modelo son correctas

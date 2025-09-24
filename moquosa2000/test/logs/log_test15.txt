@@ -1,0 +1,33 @@
+----------------------------------------------------------------
+CHEQUEO GEOMETRÍA
+----------------------------------------------------------------
+[-II-] El número de nudos de su modelo es 11. OK
+
+[-II-] La longitud de la proyección sobre el eje X de su modelo es 10.0. OK
+[-II-] La longitud de la proyección sobre el eje Y de su modelo es 0.0. OK
+[-II-] La longitud de la proyección sobre el eje Z de su modelo es 0.65. OK
+[-WW-] La coordenada x=2.2968 del nudo (2.2968, 0.0, 0.65) de su modelo, probablemente sea incorrecta
+[-WW-] La coordenada z=0.6246 del nudo (7.5, 0.0, 0.6246) de su modelo, probablemente sea incorrecta
+[-WW-] 1 coordenadas X de los nudos de su modelo puede ser incorrecta
+[-II-] Las coordenadas Y de los nudos de su modelo son correctas
+[-WW-] 1 coordenadas Z de los nudos de su modelo puede ser incorrecta
+----------------------------------------------------------------
+CHEQUEO TOPOLOGÍA
+----------------------------------------------------------------
+[-II-] El número de barras de su modelo es 19. OK
+[-WW-] La longitud de la proyección sobre el eje x de la barra definida por los nudos (0.0, 0.0, 0.65) (2.2968, 0.0, 0.65), probablemente deba ser 2.4238
+[-WW-] La longitud de la proyección sobre el eje x de la barra definida por los nudos (1.25, 0.0, 0.0) (2.2968, 0.0, 0.65), probablemente deba ser 1.1738
+[-WW-] La longitud de la proyección sobre el eje x de la barra definida por los nudos (2.2968, 0.0, 0.65) (3.75, 0.0, 0.0), probablemente deba ser 1.3262
+[-WW-] La longitud de la proyección sobre el eje x de la barra definida por los nudos (2.2968, 0.0, 0.65) (5.0, 0.0, 0.65), probablemente deba ser 2.5762
+[-WW-] La longitud de la proyección sobre el eje z de la barra definida por los nudos (5.0, 0.0, 0.65) (7.5, 0.0, 0.6246), probablemente deba ser 0.0
+[-WW-] La longitud de la proyección sobre el eje z de la barra definida por los nudos (6.25, 0.0, 0.0) (7.5, 0.0, 0.6246), probablemente deba ser 0.65
+[-WW-] La longitud de la proyección sobre el eje z de la barra definida por los nudos (7.5, 0.0, 0.6246) (8.75, 0.0, 0.0), probablemente deba ser -0.65
+[-WW-] La longitud de la proyección sobre el eje z de la barra definida por los nudos (7.5, 0.0, 0.6246) (10.0, 0.0, 0.65), probablemente deba ser 0.0
+[-WW-] 4 longitudes de la proyección sobre el eje X de las barras de su modelo puede ser incorrecta
+[-II-] La longitud de la proyección sobre el eje Y de todas las barras de su modelo son correctas
+[-WW-] 4 longitudes de la proyección sobre el eje Z de las barras de su modelo puede ser incorrecta
+----------------------------------------------------------------
+CHEQUEO SECCIONES
+----------------------------------------------------------------
+[-WW-] En la barra definida por los nudos (1.25, 0.0, 0.0) (3.75, 0.0, 0.0) cuya sección es 'CordonSuperior', su área (0.00314), su 'set modifier' (1.0) o ambos son incorrectos. Su producto debe ser 0.00103
+[-EE-] 1 propiedades de las secciones de su modelo son incorrectas. KO

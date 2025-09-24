@@ -1,0 +1,33 @@
+----------------------------------------------------------------
+CHEQUEO GEOMETRÍA
+----------------------------------------------------------------
+[-II-] El número de nudos de su modelo es 6. OK
+
+[-II-] La longitud de la proyección sobre el eje X de su modelo es 8.0. OK
+[-II-] La longitud de la proyección sobre el eje Y de su modelo es 0.0. OK
+[-II-] La longitud de la proyección sobre el eje Z de su modelo es 3.0. OK
+[-II-] Las coordenadas X de los nudos de su modelo son correctas
+[-II-] Las coordenadas Y de los nudos de su modelo son correctas
+[-II-] Las coordenadas Z de los nudos de su modelo son correctas
+----------------------------------------------------------------
+CHEQUEO TOPOLOGÍA
+----------------------------------------------------------------
+[-II-] El número de barras de su modelo es 5. OK
+[-II-] La longitud de la proyección sobre el eje X de todas las barras de su modelo son correctas
+[-II-] La longitud de la proyección sobre el eje Y de todas las barras de su modelo son correctas
+[-II-] La longitud de la proyección sobre el eje Z de todas las barras de su modelo son correctas
+----------------------------------------------------------------
+CHEQUEO SECCIONES
+----------------------------------------------------------------
+[-II-] Las propiedades de las secciones de su modelo son correctas. OK
+----------------------------------------------------------------
+CHEQUEO DOF
+----------------------------------------------------------------
+[-II-] Los grados de libertad activos de su modelo son correctos. OK
+----------------------------------------------------------------
+CHEQUEO APOYOS
+----------------------------------------------------------------
+[-II-] El número de apoyos de su modelo es 2. OK
+
+[-WW-] El nudo de su modelo cuyas coordenadas son  (100.0, 0.0, 3.0) tiene algún movimiento coaccionado. No debería tenerlo
+[-EE-] 1 apoyos de su modelo no están en el nudo adecuado. KO

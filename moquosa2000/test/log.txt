@@ -1,0 +1,75 @@
+--------------------------------------------------------------
+
+CHEQUEO GEOMETRÍA
+
+--------------------------------------------------------------
+
+[-II-] El número de nudos de su modelo es 3. OK
+[-II-] La longitud de la proyección sobre el eje X de su modelo es 10. OK
+[-II-] La longitud de la proyección sobre el eje Y de su modelo es 0. OK
+[-II-] La longitud de la proyección sobre el eje Z de su modelo es 0. OK
+[-II-] Las coordenadas X de los nudos de su modelo son correctas
+[-II-] Las coordenadas Y de los nudos de su modelo son correctas
+[-II-] Las coordenadas Z de los nudos de su modelo son correctas
+--------------------------------------------------------------
+
+CHEQUEO TOPOLOGÍA
+
+--------------------------------------------------------------
+
+[-II-] El número de barras de su modelo es 2. OK
+[-II-] La longitud de la proyección sobre el eje X de todas las barras de su modelo son correctas
+[-II-] La longitud de la proyección sobre el eje Y de todas las barras de su modelo son correctas
+[-II-] La longitud de la proyección sobre el eje Z de todas las barras de su modelo son correctas
+--------------------------------------------------------------
+
+CHEQUEO SECCIONES
+
+--------------------------------------------------------------
+
+[-II-] Las propiedades de las secciones de su modelo son correctas. OK
+--------------------------------------------------------------
+
+CHEQUEO DOF
+
+--------------------------------------------------------------
+
+[-II-] Los grados de libertad activos de su modelo son correctos. OK
+--------------------------------------------------------------
+
+CHEQUEO APOYOS
+
+--------------------------------------------------------------
+
+[-II-] El número de apoyos de su modelo es 3. OK
+[-II-] Los apoyos de su modelo son correctos. OK
+--------------------------------------------------------------
+
+CHEQUEO CARGAS EN NUDOS
+
+--------------------------------------------------------------
+
+----------------------------------------------------------------
+
+CHEQUEO CARGAS EN BARRAS
+
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+
+CHEQUEO CARGAS PUNTUALES EN BARRAS
+
+----------------------------------------------------------------
+
+[-II-] Se comprueban 1 patrones de carga. Las componentes de sus resultantes de fuerzas son (el nombre es orientativo):
+[-II-]    0, 0, -299.9985162611, 0, 0, 0 (G+Q)
+[-II-] Se comprueba el patron de cargas de su modelo G+Q, cuya resultante es 0, 0, -299.9985162611, 0, 0, 0
+
+[-WW-]    En la barra definida por los nudos (0, 0, 0) (5, 0, 0) la resultante de las cargas o su posición son incorrectas para su hipótesis G+Q
+
+[-WW-]    En la barra definida por los nudos (5, 0, 0) (10, 0, 0) la resultante de las cargas o su posición son incorrectas para su hipótesis G+Q
+
+[-WW-]    2 cargas sobre las barras del patrón de cargas G+Q de su modelo son incorrectas (aunque la resultante de todas ellas queda dentro de los márgenes de error)
+
+[-EE-] 1 patrones de carga de su modelo son incorrectos
+
