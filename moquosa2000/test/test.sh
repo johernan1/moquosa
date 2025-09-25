@@ -99,6 +99,31 @@ comparar_archivos() {
     fi
 }
 
+
+echo "test701";
+php prueba_4.php 'modelos/solucion_isostatica.$2k' 'modelos/solucion_isostatica_KO1.$2k'  1 1  >/dev/null;  
+comparar_archivos log.txt 'logs/log_test701.txt'
+
+echo "test702";
+php prueba_4.php 'modelos/solucion_isostatica.$2k' 'modelos/solucion_isostatica_KO2.$2k'  1 1  >/dev/null;  
+comparar_archivos log.txt 'logs/log_test702.txt'
+
+echo "test703";
+php prueba_4.php 'modelos/solucion_isostatica.$2k' 'modelos/solucion_isostatica_KO3.$2k'  1 1  >/dev/null;  
+comparar_archivos log.txt 'logs/log_test703.txt'
+
+echo "test704";
+php prueba_4.php 'modelos/solucion_isostatica.$2k' 'modelos/solucion_isostatica.$2k'  1 1  >/dev/null;  
+comparar_archivos log.txt 'logs/log_test704.txt'
+
+echo "test705";
+php prueba_4.php 'modelos/solucion_isostatica.$2k' 'modelos/solucion_isostatica_pulgadas_1.s2k'  1 1  >/dev/null;  
+comparar_archivos log.txt 'logs/log_test705.txt'
+
+echo "test706";
+php prueba_4.php 'modelos/solucion_isostatica_pulgadas_1.s2k' 'modelos/solucion_isostatica.$2k'  1 1  >/dev/null;  
+comparar_archivos log.txt 'logs/log_test706.txt'
+
 #----GEOMETRÍA Y TOPOLOGIA-----------------------------------------------------
 echo "test1";
 php prueba_0.php 'modelos/modelo1.$2k' 'modelos/modelo1.$2k' > /dev/null;  
@@ -286,7 +311,7 @@ comparar_archivos log.txt 'logs/log_test80.txt'
 
 
 echo "test81";
-php prueba_6.php 'modelos/modelo51.$2k' 'modelos/modelo51-B.$2k'  1 1 >/dev/null;  
+php prueba_6.php 'modelos/modelo51.$2k' 'modelos/modelo51-B.$2k'  1 1  >/dev/null;  
 comparar_archivos log.txt 'logs/log_test81.txt'
 
 

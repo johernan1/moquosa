@@ -40,6 +40,10 @@ if (!trait_exists('myio')) {
         public $n_tokens_frame_loads_point;
         public $tokens_frame_loads_point_normalized;
 
+    	public $tokens_frame_moments_point;
+        public $n_tokens_frame_moments_point;
+        public $tokens_frame_moments_point_normalized;
+
         // Constructor para inicializar las propiedades
         public function miconstructor() {
             // print_object("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n");
@@ -96,6 +100,12 @@ if (!trait_exists('myio')) {
             $this->n_tokens_frame_loads_point = count($this->tokens_frame_loads_point);
             // Se añaden columnas en el modelo normalizado
             $this->tokens_frame_loads_point_normalized = $this->tokens_frame_loads_point;
+
+            //----------------------------------------------------------------
+            $this->tokens_frame_moments_point = ["Frame", "LoadPat", "CoordSys", "Type", "Dir", "RelDist", "Moment", "GUID"];
+            $this->n_tokens_frame_moments_point = count($this->tokens_frame_moments_point);
+            // Se añaden columnas en el modelo normalizado
+            $this->tokens_frame_moments_point_normalized = $this->tokens_frame_moments_point;
         }
     
     }

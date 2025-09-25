@@ -60,7 +60,7 @@ if (!trait_exists('chk')) {
             $col_z_orig = array_search('Orig_Z', $this->tokens_joint_coordinates_normalized);
 
             
-            print_object('$this->tokens_joint_coordinates_normalized');
+            // print_object('$this->tokens_joint_coordinates_normalized');
             // print_object($this->tokens_joint_coordinates_normalized);
             // print_object('$col_x_norm');print_object($col_x_norm);
             // print_object('$col_y_norm');print_object($col_y_norm);
@@ -606,7 +606,7 @@ if (!trait_exists('chk')) {
                                                 $frame_loads_distributed_normalized_RES,
                                                 $tokens_frame_loads_distributed_normalized,
                                                 $obtener_resultante_frame_loads_distributed, // Función pasada como parámetro
-                                                $DOF_SOL, $f) {
+                                                $DOF_SOL, $f, $fuerzas="fuerzas") {
         
         $KO_LP = 0;
         $col_LoadPat = array_search('LoadPat', $tokens_frame_loads_distributed_normalized);
@@ -626,7 +626,7 @@ if (!trait_exists('chk')) {
         }
 
         $Resul_RES_chequeado = [];
-        $f->write( "[-II-] Se comprueban " . count($LoadPat_frame_loads_distributed_SOL) . " patrones de carga. Las componentes de sus resultantes de fuerzas son (el nombre es orientativo):");
+        $f->write( "[-II-] Se comprueban " . count($LoadPat_frame_loads_distributed_SOL) . " patrones de carga. Las componentes de sus resultantes de ".$fuerzas." son (el nombre es orientativo):");
 
         // Se imprime la resultante de cada LoadPat
         foreach ($Resul_frame_loads_distributed_SOL as $I_Resul) {
@@ -710,7 +710,8 @@ if (!trait_exists('chk')) {
     // Se comparan los patrones de carga LoadPat_SOL y  LoadPat_RES
     // En la función chk_frame_loads_disturbed se elige los patrones que pueden compararse
     // Actualmente aquellos que son estáticamente equivalentes
-    // La función se puede utilizar también para frame_loads_point
+    // La función se puede utilizar también para frame_loads_point y
+    // frame_moments_point
     public function chk_frame_load_distributed($frame_loads_distributed_normalized_SOL,
                                                $frame_loads_distributed_normalized_RES,
                                                $tokens_frame_loads_distributed_normalized,

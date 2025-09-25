@@ -3,16 +3,29 @@
 if (!trait_exists(' frame_loads_point')) {
     trait  frame_loads_point {
 
-            public function normalizar_frame_loads_point($frame_loads_point, $frame_connectivity_normalized, $unidadesL, $unidadesF, $EscM = 1, $EscF = 1) {
+    	   //Todo lo que sigue se puede utilizar para comprobar fuerzas puntuales o momentos puntuales
+	   //La única diferencia es el parametro force_moment que por defecto es 'Force'
+	   //
+            public function normalizar_frame_loads_point($frame_loads_point, $frame_connectivity_normalized, $unidadesL, $unidadesF, $EscM = 1, $EscF = 1, $force_moment = 'Force') {
         // echo  "normalizar_frame_loads_point\n";
         // echo  "tokens_frame_connectivity_normalized: ", json_encode($this->tokens_frame_connectivity_normalized), "\n";
         // echo  "frame_loads_point: ", json_encode($this->tokens_frame_loads_point), "\n";
-        
-        $col_Frame            = array_search('Frame', $this->tokens_frame_loads_point);
-        $col_RelDist          = array_search('RelDist', $this->tokens_frame_loads_point);
-        $col_Force            = array_search('Force', $this->tokens_frame_loads_point);
-        $col_Type             = array_search('Type', $this->tokens_frame_loads_point);
-        $col_Dir              = array_search('Dir', $this->tokens_frame_loads_point);
+
+	if ($force_moment === 'Moment') {
+           $tokens_frame_loads_moment_point = $this->tokens_frame_moments_point;
+           $tokens_frame_loads_moment_point_normalized = $this->tokens_frame_moments_point_normalized;
+	}
+	else {
+           $tokens_frame_loads_moment_point = $this->tokens_frame_loads_point;
+           $tokens_frame_loads_moment_point_normalized = $this->tokens_frame_loads_point_normalized;
+	   }
+        //echo  "frame_loads_moments_point: ", json_encode($tokens_frame_loads_moment_point), "\n";
+	   
+        $col_Frame            = array_search('Frame', $tokens_frame_loads_moment_point);
+        $col_RelDist          = array_search('RelDist', $tokens_frame_loads_moment_point);
+        $col_Force            = array_search($force_moment, $tokens_frame_loads_moment_point);
+        $col_Type             = array_search('Type', $tokens_frame_loads_moment_point);
+        $col_Dir              = array_search('Dir', $tokens_frame_loads_moment_point);
         $col_JointI_Orig_XorR = array_search('JointI_Orig_XorR', $this->tokens_frame_connectivity_normalized);
         $col_JointI_Orig_Y    = array_search('JointI_Orig_Y', $this->tokens_frame_connectivity_normalized);
         $col_JointI_Orig_Z    = array_search('JointI_Orig_Z', $this->tokens_frame_connectivity_normalized);
@@ -27,6 +40,9 @@ if (!trait_exists(' frame_loads_point')) {
         
         $factorunidadesF = $this->obtener_factor_cambio_unidades_fuerza($unidadesF) * $EscF;
         $factorunidadesL = $this->obtener_factor_cambio_unidades_longitud($unidadesL) * $EscM;
+        if ($force_moment === 'Moment') {
+            $factorunidadesF = $factorunidadesF * $this->obtener_factor_cambio_unidades_longitud($unidadesL);
+        }
         
         // Crear diccionario para localizar la fila de la barra
         $n_frame_connectivity = [];
@@ -37,6 +53,11 @@ if (!trait_exists(' frame_loads_point')) {
         // Añadir varias columnas si no existen
         if (!in_array("Norm_Frame", $this->tokens_frame_loads_point_normalized)) {
             array_push($this->tokens_frame_loads_point_normalized, "Norm_Frame", "JointI_Orig_XorR", "JointI_Orig_Y", "JointI_Orig_Z", 
+                       "JointJ_Orig_XorR", "JointJ_Orig_Y", "JointJ_Orig_Z", "Norm_IxJ", "Norm_Lx", "Norm_Ly", "Norm_Lz", 
+                       "Norm_L", "Norm_Force", "Norm_R", "Norm_e");
+        }
+        if (!in_array("Norm_Frame", $this->tokens_frame_moments_point_normalized)) {
+            array_push($this->tokens_frame_moments_point_normalized, "Norm_Frame", "JointI_Orig_XorR", "JointI_Orig_Y", "JointI_Orig_Z", 
                        "JointJ_Orig_XorR", "JointJ_Orig_Y", "JointJ_Orig_Z", "Norm_IxJ", "Norm_Lx", "Norm_Ly", "Norm_Lz", 
                        "Norm_L", "Norm_Force", "Norm_R", "Norm_e");
         }
@@ -86,7 +107,7 @@ if (!trait_exists(' frame_loads_point')) {
                         $JointJ_Orig_Y, $JointJ_Orig_Z, $norm_IxJ, $norm_Lx, $norm_Ly, $norm_Lz, $norm_L, $norm_Force, $norm_R, $norm_e);
         }
 
-        $col_LoadPat = array_search('LoadPat', $this->tokens_frame_loads_point_normalized);
+        $col_LoadPat = array_search('LoadPat', $tokens_frame_loads_moment_point_normalized);
         // echo  "normalizar_frame_loads_point.col_LoadPat: ", $col_LoadPat, "\n";
         
         return $this->ordenar_lista_lista_strcoli_colj_colk($frame_loads_point, $col_LoadPat, $this->n_tokens_frame_loads_point, $this->n_tokens_frame_loads_point);

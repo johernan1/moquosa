@@ -30,18 +30,18 @@ if (!trait_exists('joints')) {
             $coly = array_search('Y', $this->tokens_joint_coordinates);
             $colz = array_search('Z', $this->tokens_joint_coordinates);
 
-            print_object('normalizar_joint_coordinates');
-            print_object('$colx');
-            print_object($colx);
-            print_object('$coly');
-            print_object($coly);
-            print_object('$colz');
-            print_object($colz);
+            // print_object('normalizar_joint_coordinates');
+            // print_object('$colx');
+            // print_object($colx);
+            // print_object('$coly');
+            // print_object($coly);
+            // print_object('$colz');
+            // print_object($colz);
             // Se ordena 
             $joint_coordinates_sort = $this->ordenar_lista_lista_coli_colj_colk($joint_coordinates, $colx, $coly, $colz);
 
-            print_object('coordenadas ordenadas');
-            print_object($joint_coordinates_sort);
+            // print_object('coordenadas ordenadas');
+            // print_object($joint_coordinates_sort);
             
             list($xcdg, $ycdg, $zcdg) = $this->obtener_cdg_joint_coordinates($joint_coordinates_sort);
 

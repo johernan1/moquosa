@@ -203,6 +203,46 @@ if (!trait_exists('chk_all')) {
                 $calificacion += 1;
             }
 
+
+            //-------------------------------------------------------------------------------
+            $f->write( "----------------------------------------------------------------\n");
+            $f->write( "CHEQUEO MOMENTOS PUNTUALES EN BARRAS\n");
+            $f->write( "----------------------------------------------------------------\n");
+
+            $patron = '/Frame.*LoadPat.*Type=Moment.*Moment/';
+
+            $frame_moments_point_SOL = $this->buscar_patron_SAP_tokens($archivoSOL, $patron, $this->tokens_frame_moments_point);
+            $frame_moments_point_RES = $this->buscar_patron_SAP_tokens($archivoRES, $patron, $this->tokens_frame_moments_point);
+
+            $this->printL($frame_moments_point_SOL, "frame_moments_point_SOL---------------------------");
+
+
+            $frame_moments_point_normalized_SOL = $this->normalizar_frame_loads_point(
+                $frame_moments_point_SOL, $frame_connectivity_normalized_SOL,
+                $unidadesL_SOL, $unidadesF_SOL, $EscL, $EscF, 'Moment'
+            );
+
+            $frame_moments_point_normalized_RES = $this->normalizar_frame_loads_point(
+                $frame_moments_point_RES, $frame_connectivity_normalized_RES,
+                $unidadesL_RES, $unidadesF_RES, 1, 1, 'Moment'
+            );
+
+            $this->printL($frame_moments_point_normalized_SOL, "frame_moments_point_normalized_SOL-------------------------");
+
+            $chk = $this->chk_frame_loads_distributed(
+                $frame_moments_point_normalized_SOL,
+                $frame_moments_point_normalized_RES,
+                $this->tokens_frame_moments_point_normalized,
+                [$this,'obtener_resultante_frame_loads_point'],  // Assuming this is a function name
+                $DOF_SOL, $f, "momentos"
+            );
+
+            if ($chk == 0) {
+                return $calificacion;
+            } elseif ($chk != -1) {  // -1 si no hay cargas
+                $calificacion += 1;
+            }
+
             //-------------------------------------------------------------------------------
             return $calificacion;
  
