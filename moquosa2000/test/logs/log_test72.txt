@@ -49,9 +49,4 @@ CHEQUEO CARGAS EN BARRAS
 [-II-] Se comprueba el patron de cargas de su modelo G+Q, cuya resultante es 0.0, 0.0, -161.05519999999996, 0.0, 0.0, 0.0
 [-II-]    Las cargas distribuidas sobre las barras del patron G+Q son correctas. OK
 [-II-] Los patrones de carga de su modelo son correctos.
-----------------------------------------------------------------
-CHEQUEO CARGAS PUNTUALES EN BARRAS
-----------------------------------------------------------------
-----------------------------------------------------------------
-CHEQUEO MOMENTOS PUNTUALES EN BARRAS
-----------------------------------------------------------------
+

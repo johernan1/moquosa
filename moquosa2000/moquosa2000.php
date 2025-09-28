@@ -37,6 +37,10 @@ class moquosaF {
     public function write($texto) {
         $this->val .= $texto.'<br>';  // Añadir el texto al final de $val
     }
+    // Método para añadir texto a la propiedad $val
+    public function add($texto) {
+        $this->val .= $texto;  // Añadir el texto al final de $val
+    }
 }
 
 

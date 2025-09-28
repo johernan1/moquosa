@@ -45,6 +45,10 @@ class F {
     public function write($texto) {
         $this->val .= $texto.'<br>';  // Añadir el texto al final de $val
     }
+    // Método para añadir texto a la propiedad $val
+    public function add($texto) {
+        $this->val .= $texto;  // Añadir el texto al final de $val
+    }
 
     public function val_sin_br() {
         return str_replace('<br>', "\n", $this->val);

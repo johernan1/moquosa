@@ -43,17 +43,12 @@ CHEQUEO APOYOS
 
 [-II-] El número de apoyos de su modelo es 2. OK
 [-II-] Los apoyos de su modelo son correctos. OK
---------------------------------------------------------------
-
-CHEQUEO CARGAS EN NUDOS
-
---------------------------------------------------------------
-
 ----------------------------------------------------------------
 
 CHEQUEO CARGAS EN BARRAS
 
 ----------------------------------------------------------------
+
 
 [-II-] Se comprueban 1 patrones de carga. Las componentes de sus resultantes de fuerzas son (el nombre es orientativo):
 [-II-]    0, 0, -160, 0, 0, 0 (G+Q)
@@ -63,11 +58,6 @@ CHEQUEO CARGAS EN BARRAS
 
 [-II-] Los patrones de carga de su modelo son correctos.
 
-----------------------------------------------------------------
-
-CHEQUEO CARGAS PUNTUALES EN BARRAS
-
-----------------------------------------------------------------
 
 ----------------------------------------------------------------
 

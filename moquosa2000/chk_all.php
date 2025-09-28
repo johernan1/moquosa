@@ -106,10 +106,12 @@ if (!trait_exists('chk_all')) {
             }
             $calificacion++;
 
+            $pre_f=new moquosaF();
+            $out_f=new moquosaF();
             // Check loads on joints
-            $f->write("--------------------------------------------------------------\n");
-            $f->write("CHEQUEO CARGAS EN NUDOS\n");
-            $f->write("--------------------------------------------------------------\n");
+            $pre_f->write("--------------------------------------------------------------\n");
+            $pre_f->write("CHEQUEO CARGAS EN NUDOS\n");
+            $pre_f->write("--------------------------------------------------------------\n");
             $patron = '/Joint.*LoadPat/';
 
             $joint_loads_force_SOL = $this->buscar_patron_SAP_tokens($archivoSOL, $patron, $this->tokens_joint_loads_force);
@@ -118,18 +120,24 @@ if (!trait_exists('chk_all')) {
             $joint_loads_force_normalized_SOL = $this->normalizar_joint_loads_force($joint_loads_force_SOL, $joint_coordinates_normalized_SOL, $unidadesL_SOL, $unidadesF_SOL, $EscL, $EscF);
             $joint_loads_force_normalized_RES = $this->normalizar_joint_loads_force($joint_loads_force_RES, $joint_coordinates_normalized_RES, $unidadesL_RES, $unidadesF_RES);
 
-            $chk = $this->chk_joint_loads($joint_loads_force_normalized_SOL, $joint_loads_force_normalized_RES, $DOF_SOL, $f);
+            $chk = $this->chk_joint_loads($joint_loads_force_normalized_SOL, $joint_loads_force_normalized_RES, $DOF_SOL, $out_f);
             if ($chk == 0) {
+                $f->add($pre_f->val);
+                $f->add($out_f->val);
                 return $calificacion;
             } elseif ($chk != -1) {  // -1 if there are no loads
+                $f->add($pre_f->val);
+                $f->add($out_f->val);
                 $calificacion++;
             }
-
+            
+            $pre_f->val='';
+            $out_f->val='';
             // Check distributed loads on frames
             //-------------------------------------------------------------------------------
-            $f->write( "----------------------------------------------------------------\n");
-            $f->write( "CHEQUEO CARGAS EN BARRAS\n");
-            $f->write( "----------------------------------------------------------------\n");
+            $pre_f->write( "----------------------------------------------------------------\n");
+            $pre_f->write( "CHEQUEO CARGAS EN BARRAS\n");
+            $pre_f->write( "----------------------------------------------------------------\n");
             $patron = '/Frame.*LoadPat.*Type=Force.*FOverLA/';
 
             $frame_loads_distributed_SOL = $this->buscar_patron_SAP_tokens($archivoSOL, $patron, $this->tokens_frame_loads_distributed);
@@ -156,19 +164,25 @@ if (!trait_exists('chk_all')) {
                 $frame_loads_distributed_normalized_RES,
                 $this->tokens_frame_loads_distributed_normalized,
                 [$this,'obtener_resultante_frame_loads_distributed'],  // Assuming this is a function name
-                $DOF_SOL, $f
+                $DOF_SOL, $out_f
             );
 
             if ($chk == 0) {
+                $f->add($pre_f->val);
+                $f->add($out_f->val);
                 return $calificacion;
             } elseif ($chk != -1) {  // -1 si no hay cargas
+                $f->add($pre_f->val);
+                $f->add($out_f->val);
                 $calificacion += 1;
             }
 
+            $pre_f->val='';
+            $out_f->val='';
             //-------------------------------------------------------------------------------
-            $f->write( "----------------------------------------------------------------\n");
-            $f->write( "CHEQUEO CARGAS PUNTUALES EN BARRAS\n");
-            $f->write( "----------------------------------------------------------------\n");
+            $pre_f->write( "----------------------------------------------------------------\n");
+            $pre_f->write( "CHEQUEO CARGAS PUNTUALES EN BARRAS\n");
+            $pre_f->write( "----------------------------------------------------------------\n");
 
             $patron = '/Frame.*LoadPat.*Type=Force.*Force/';
 
@@ -194,20 +208,26 @@ if (!trait_exists('chk_all')) {
                 $frame_loads_point_normalized_RES,
                 $this->tokens_frame_loads_point_normalized,
                 [$this,'obtener_resultante_frame_loads_point'],  // Assuming this is a function name
-                $DOF_SOL, $f
+                $DOF_SOL, $out_f
             );
 
             if ($chk == 0) {
+                $f->add($pre_f->val);
+                $f->add($out_f->val);
                 return $calificacion;
             } elseif ($chk != -1) {  // -1 si no hay cargas
+                $f->add($pre_f->val);
+                $f->add($out_f->val);
                 $calificacion += 1;
             }
 
 
+            $pre_f->val='';
+            $out_f->val='';
             //-------------------------------------------------------------------------------
-            $f->write( "----------------------------------------------------------------\n");
-            $f->write( "CHEQUEO MOMENTOS PUNTUALES EN BARRAS\n");
-            $f->write( "----------------------------------------------------------------\n");
+            $pre_f->write( "----------------------------------------------------------------\n");
+            $pre_f->write( "CHEQUEO MOMENTOS PUNTUALES EN BARRAS\n");
+            $pre_f->write( "----------------------------------------------------------------\n");
 
             $patron = '/Frame.*LoadPat.*Type=Moment.*Moment/';
 
@@ -234,14 +254,19 @@ if (!trait_exists('chk_all')) {
                 $frame_moments_point_normalized_RES,
                 $this->tokens_frame_moments_point_normalized,
                 [$this,'obtener_resultante_frame_loads_point'],  // Assuming this is a function name
-                $DOF_SOL, $f, "momentos"
+                $DOF_SOL, $out_f, "momentos"
             );
 
             if ($chk == 0) {
+                $f->add($pre_f->val);
+                $f->add($out_f->val);
                 return $calificacion;
             } elseif ($chk != -1) {  // -1 si no hay cargas
+                $f->add($pre_f->val);
+                $f->add($out_f->val);
                 $calificacion += 1;
             }
+            
 
             //-------------------------------------------------------------------------------
             return $calificacion;

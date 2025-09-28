@@ -94,6 +94,7 @@ comparar_archivos() {
     else
         echo "Los archivos $archivo1 y $archivo2 son diferentes"
 	echo "Se genera el fichero ${archivo2}NEW"
+	echo "meld $archivo2  ${archivo2}NEW"
 	cp $archivo1 "${archivo2}NEW"
         exit 1  # Termina el script con un código de salida no cero para indicar un error
     fi
