@@ -116,7 +116,7 @@ class qtype_moquosa_question extends question_graded_by_strategy
         global $COURSE;
         $context = context_course::instance($COURSE->id);
         $contextid = $context->id;
-        $component = 'question_moquosa';
+        $component = 'qtype_moquosa';
         $filearea = 'moquosa_prof';
         $itemid = $this->id; // El ID de la pregunta o el ID del área de archivo
 

@@ -26,7 +26,7 @@ if (!trait_exists('trait_questiontype_moquosa')) {
          
             $context = context_course::instance($COURSE->id);
             $contextid = $context->id;
-            $component = 'question_moquosa';
+            $component = 'qtype_moquosa';
             $filearea = 'moquosa_prof';
             $itemid = $question->id; 
 

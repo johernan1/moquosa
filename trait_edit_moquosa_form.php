@@ -19,8 +19,6 @@ if (!trait_exists('trait_edit_moquosa_form')) {
         /**
          * Add the filepicker to the form.
          * @param object $mform the form being built.
-         * @param int $contextid the context ID.
-         * @param int $questionid the question ID.
          */
         protected function add_filepicker($mform) {
             //Depuracion   
@@ -52,7 +50,8 @@ if (!trait_exists('trait_edit_moquosa_form')) {
                                array('maxbytes' => $CFG->maxbytes,
                                      // 'maxbytes' => 10485760, // 10 MB
                                      'maxfiles' => 1,
-                                     'accepted_types' => ['*']));
+                                     'accepted_types' => ['*'],
+                                     'draftitemid' => $draftitemid));
             // Regla para hacer el campo obligatorio.
             $mform->addRule($filearea,
                             null,

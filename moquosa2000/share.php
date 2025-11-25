@@ -82,7 +82,7 @@ if (!trait_exists('share')) {
                 
                 // Iterar sobre los tokens únicos para dividir el contenido de la tabla
                
-                $patron_fila = '/(?=\b' . preg_quote($primer_token) . '=)/';
+                $patron_fila = '/(?=\b' . preg_quote((string)$primer_token) . '=)/';
                 $partes = preg_split($patron_fila, $contenido_de_tabla);
                 
                 // Asociar las filas con tokens a su respectiva tabla por nombre

@@ -120,7 +120,7 @@ class qtype_moquosa_renderer extends qtype_renderer {
         global $DB, $COURSE, $USER, $CFG;
         $course_id=$COURSE->id;
 
-	$context = context_course::instance($course_id)
+	$context = context_course::instance($course_id);
         $roles = get_user_roles($context, $USER->id, true);
         $drawSol = 0;
         foreach($roles as $r) {
